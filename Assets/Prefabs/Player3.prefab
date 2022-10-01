@@ -1,0 +1,221 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5040484564717093509
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5040484564717093508}
+  - component: {fileID: 5040484564717093507}
+  m_Layer: 0
+  m_Name: Player3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5040484564717093508
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5040484564717093509}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -28.533329, y: 2.4457178, z: 8.32819}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 9142058417578481161}
+  - {fileID: 4170715935745918538}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5040484564717093507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5040484564717093509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 931df6e5bd35ace4d9f04a369939c978, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mario: {fileID: 9142058417578481157}
+  pikachu: {fileID: 4170715935745918534}
+  isMario: 0
+  marioComponents: []
+  pikachuComponents: []
+  healthText: {fileID: 0}
+  ammoText: {fileID: 0}
+--- !u!1001 &5040484565189592645
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 5040484564717093508}
+    m_Modifications:
+    - target: {fileID: 4263918943264411712, guid: a238181cd86f5c84f8da0349cf2b928e,
+        type: 3}
+      propertyPath: m_Name
+      value: Mario Shooter nomirror
+      objectReference: {fileID: 0}
+    - target: {fileID: 4263918943264411712, guid: a238181cd86f5c84f8da0349cf2b928e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4263918943264411724, guid: a238181cd86f5c84f8da0349cf2b928e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4263918943264411724, guid: a238181cd86f5c84f8da0349cf2b928e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4263918943264411724, guid: a238181cd86f5c84f8da0349cf2b928e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5.585558
+      objectReference: {fileID: 0}
+    - target: {fileID: 4263918943264411724, guid: a238181cd86f5c84f8da0349cf2b928e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4263918943264411724, guid: a238181cd86f5c84f8da0349cf2b928e,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.99948967
+      objectReference: {fileID: 0}
+    - target: {fileID: 4263918943264411724, guid: a238181cd86f5c84f8da0349cf2b928e,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4263918943264411724, guid: a238181cd86f5c84f8da0349cf2b928e,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.0319469
+      objectReference: {fileID: 0}
+    - target: {fileID: 4263918943264411724, guid: a238181cd86f5c84f8da0349cf2b928e,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4263918943264411724, guid: a238181cd86f5c84f8da0349cf2b928e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4263918943264411724, guid: a238181cd86f5c84f8da0349cf2b928e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -3.661
+      objectReference: {fileID: 0}
+    - target: {fileID: 4263918943264411724, guid: a238181cd86f5c84f8da0349cf2b928e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a238181cd86f5c84f8da0349cf2b928e, type: 3}
+--- !u!1 &9142058417578481157 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4263918943264411712, guid: a238181cd86f5c84f8da0349cf2b928e,
+    type: 3}
+  m_PrefabInstance: {fileID: 5040484565189592645}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &9142058417578481161 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4263918943264411724, guid: a238181cd86f5c84f8da0349cf2b928e,
+    type: 3}
+  m_PrefabInstance: {fileID: 5040484565189592645}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &5040484565860343426
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 5040484564717093508}
+    m_Modifications:
+    - target: {fileID: 8940272025356966084, guid: b5c686fc24bcfba4b8b197e3c586a94b,
+        type: 3}
+      propertyPath: m_Name
+      value: Pikachu Platformer 2 (good) nomirror
+      objectReference: {fileID: 0}
+    - target: {fileID: 8940272025356966088, guid: b5c686fc24bcfba4b8b197e3c586a94b,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8940272025356966088, guid: b5c686fc24bcfba4b8b197e3c586a94b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8940272025356966088, guid: b5c686fc24bcfba4b8b197e3c586a94b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.41
+      objectReference: {fileID: 0}
+    - target: {fileID: 8940272025356966088, guid: b5c686fc24bcfba4b8b197e3c586a94b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8940272025356966088, guid: b5c686fc24bcfba4b8b197e3c586a94b,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8940272025356966088, guid: b5c686fc24bcfba4b8b197e3c586a94b,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8940272025356966088, guid: b5c686fc24bcfba4b8b197e3c586a94b,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8940272025356966088, guid: b5c686fc24bcfba4b8b197e3c586a94b,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8940272025356966088, guid: b5c686fc24bcfba4b8b197e3c586a94b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8940272025356966088, guid: b5c686fc24bcfba4b8b197e3c586a94b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8940272025356966088, guid: b5c686fc24bcfba4b8b197e3c586a94b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b5c686fc24bcfba4b8b197e3c586a94b, type: 3}
+--- !u!1 &4170715935745918534 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8940272025356966084, guid: b5c686fc24bcfba4b8b197e3c586a94b,
+    type: 3}
+  m_PrefabInstance: {fileID: 5040484565860343426}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &4170715935745918538 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8940272025356966088, guid: b5c686fc24bcfba4b8b197e3c586a94b,
+    type: 3}
+  m_PrefabInstance: {fileID: 5040484565860343426}
+  m_PrefabAsset: {fileID: 0}
