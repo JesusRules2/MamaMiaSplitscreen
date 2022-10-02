@@ -9,6 +9,8 @@ TagManager:
   - HitEffect
   - Pikachu
   - Mario
+  - Star
+  - TextJoinGame
   layers:
   - Default
   - TransparentFX

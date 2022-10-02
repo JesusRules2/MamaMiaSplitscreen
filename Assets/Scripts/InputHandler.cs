@@ -347,7 +347,11 @@ public class InputHandler : MonoBehaviour
         if (bPauseMenuOn && context.canceled) {
             Destroy(gameObject);
         }
+    }
 
+    public void QuitMatch() {
+        // MultiplayerGameManager.instance.QuitGame();
+        FindObjectOfType<MultiplayerGameManager>().QuitGame();
     }
 
 }

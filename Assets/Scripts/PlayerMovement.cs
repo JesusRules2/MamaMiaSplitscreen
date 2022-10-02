@@ -212,7 +212,7 @@ public class PlayerMovement : MonoBehaviour
     }
     void LateUpdate()
     {
-        if (this.anim.GetCurrentAnimatorStateInfo(1).IsName("Reload"))
+        if (this.anim && this.anim.GetCurrentAnimatorStateInfo(1).IsName("Reload"))
         {
             states.reloading = true;
         }
