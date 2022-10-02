@@ -11,7 +11,8 @@
                     "id": "8ee215e0-2a69-4b2f-a841-0ac48994bda7",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Movement",
@@ -19,7 +20,8 @@
                     "id": "39c1c323-c578-4c77-96cf-37199f0c9d7a",
                     "expectedControlType": "Vector2",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "View",
@@ -27,7 +29,8 @@
                     "id": "1ad5ba2b-e518-459f-8cc9-9b05361bb73e",
                     "expectedControlType": "Vector2",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -164,7 +167,8 @@
                     "id": "cc6ca5c6-dd78-4e61-b7ca-1fa98443795c",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Movement",
@@ -172,7 +176,8 @@
                     "id": "40bd0dfe-d896-4b41-bb0f-4c1254bd4725",
                     "expectedControlType": "Vector2",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "View",
@@ -180,7 +185,8 @@
                     "id": "74114640-5289-45c4-8253-34df46691e56",
                     "expectedControlType": "Vector2",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Fire",
@@ -188,7 +194,8 @@
                     "id": "3441008a-9659-4547-8719-f9f5817009e8",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": true
                 },
                 {
                     "name": "Aim",
@@ -196,7 +203,8 @@
                     "id": "7cb5fdcb-ee10-4b4b-bb9b-ce3671813ac0",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": true
                 },
                 {
                     "name": "Reload",
@@ -204,7 +212,8 @@
                     "id": "be48f79f-f9bb-4d48-8513-bf3faa597cfd",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "PauseMenu",
@@ -212,7 +221,8 @@
                     "id": "661ac518-f2cc-4ef8-a2b3-8ed1f1077c12",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Submit",
@@ -220,7 +230,17 @@
                     "id": "3cd715a2-468a-4086-b3a7-09948a7f48bb",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "B-Button",
+                    "type": "Button",
+                    "id": "a628d2b7-a032-421c-9987-68ab59abf543",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -432,6 +452,17 @@
                     "action": "Submit",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b0d9beaa-474c-4080-97c2-6f6a90ce06a1",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "B-Button",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
@@ -445,7 +476,8 @@
                     "id": "9efb7013-acc2-4bc4-9c59-8cac219d2c4f",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [

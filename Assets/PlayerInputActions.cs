@@ -254,6 +254,15 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""B-Button"",
+                    ""type"": ""Button"",
+                    ""id"": ""a628d2b7-a032-421c-9987-68ab59abf543"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -465,6 +474,17 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                     ""action"": ""Submit"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b0d9beaa-474c-4080-97c2-6f6a90ce06a1"",
+                    ""path"": ""<Gamepad>/buttonEast"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""B-Button"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -542,6 +562,7 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
         m_Mario_Reload = m_Mario.FindAction("Reload", throwIfNotFound: true);
         m_Mario_PauseMenu = m_Mario.FindAction("PauseMenu", throwIfNotFound: true);
         m_Mario_Submit = m_Mario.FindAction("Submit", throwIfNotFound: true);
+        m_Mario_BButton = m_Mario.FindAction("B-Button", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Submit = m_UI.FindAction("Submit", throwIfNotFound: true);
@@ -661,6 +682,7 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
     private readonly InputAction m_Mario_Reload;
     private readonly InputAction m_Mario_PauseMenu;
     private readonly InputAction m_Mario_Submit;
+    private readonly InputAction m_Mario_BButton;
     public struct MarioActions
     {
         private @PlayerInputActions m_Wrapper;
@@ -673,6 +695,7 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
         public InputAction @Reload => m_Wrapper.m_Mario_Reload;
         public InputAction @PauseMenu => m_Wrapper.m_Mario_PauseMenu;
         public InputAction @Submit => m_Wrapper.m_Mario_Submit;
+        public InputAction @BButton => m_Wrapper.m_Mario_BButton;
         public InputActionMap Get() { return m_Wrapper.m_Mario; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -706,6 +729,9 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                 @Submit.started -= m_Wrapper.m_MarioActionsCallbackInterface.OnSubmit;
                 @Submit.performed -= m_Wrapper.m_MarioActionsCallbackInterface.OnSubmit;
                 @Submit.canceled -= m_Wrapper.m_MarioActionsCallbackInterface.OnSubmit;
+                @BButton.started -= m_Wrapper.m_MarioActionsCallbackInterface.OnBButton;
+                @BButton.performed -= m_Wrapper.m_MarioActionsCallbackInterface.OnBButton;
+                @BButton.canceled -= m_Wrapper.m_MarioActionsCallbackInterface.OnBButton;
             }
             m_Wrapper.m_MarioActionsCallbackInterface = instance;
             if (instance != null)
@@ -734,6 +760,9 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                 @Submit.started += instance.OnSubmit;
                 @Submit.performed += instance.OnSubmit;
                 @Submit.canceled += instance.OnSubmit;
+                @BButton.started += instance.OnBButton;
+                @BButton.performed += instance.OnBButton;
+                @BButton.canceled += instance.OnBButton;
             }
         }
     }
@@ -805,6 +834,7 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
         void OnReload(InputAction.CallbackContext context);
         void OnPauseMenu(InputAction.CallbackContext context);
         void OnSubmit(InputAction.CallbackContext context);
+        void OnBButton(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {

@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class MultiplayerGameManager : MonoBehaviour
 {
@@ -65,5 +66,6 @@ public class MultiplayerGameManager : MonoBehaviour
             Destroy(mario);
         }
         GameObject.FindObjectOfType<PlayerInputManager>().DisableJoining();
+        EventSystem.current.SetSelectedGameObject(playButton.gameObject);
     }
 }

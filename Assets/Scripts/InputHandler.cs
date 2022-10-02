@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 // using Mirror;
 using UnityEngine.InputSystem;
 
@@ -76,6 +77,11 @@ public class InputHandler : MonoBehaviour
      public Vector2 mouseDelta;
      public GameObject pauseMenu;
      bool bPauseMenuOn = false;
+
+     public GameObject BtnQuitGame;
+     public GameObject BtnNO;
+     public GameObject screen0;
+     public GameObject screen1;
 
     // Start is called before the first frame update
     // void Start()
@@ -333,9 +339,16 @@ public class InputHandler : MonoBehaviour
         else if (bPauseMenuOn == false)
         {
              pauseMenu.SetActive(true);
+             EventSystem.current.SetSelectedGameObject(BtnQuitGame);
              bPauseMenuOn = true;
         }
     }
+
+    public void SecondScreenPauseMenu() {
+        EventSystem.current.SetSelectedGameObject(BtnNO);
+        screen1.SetActive(true);
+    }
+
 
     public void QuitGame() {
         if (bPauseMenuOn) {
@@ -344,9 +357,9 @@ public class InputHandler : MonoBehaviour
 
     }
     public void QuitGameController(InputAction.CallbackContext context) {
-        if (bPauseMenuOn && context.canceled) {
-            Destroy(gameObject);
-        }
+        // if (bPauseMenuOn && context.canceled) {
+        //     Destroy(gameObject);
+        // }
     }
 
     public void QuitMatch() {
@@ -354,4 +367,11 @@ public class InputHandler : MonoBehaviour
         FindObjectOfType<MultiplayerGameManager>().QuitGame();
     }
 
+    public void HidePauseMenu() {
+        
+        pauseMenu.SetActive(false);
+        bPauseMenuOn = false;
+        screen0.SetActive(true);
+        screen1.SetActive(false);
+    }
 }
