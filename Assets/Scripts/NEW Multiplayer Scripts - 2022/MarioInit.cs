@@ -14,8 +14,8 @@ public class MarioInit : MonoBehaviour
     {
         GameObject.FindGameObjectWithTag("TextJoinGame").GetComponent<TMP_Text>().enabled = false;
         bGameOver = false;
-        killWinCount = MultiplayerGameManager.instance.killCountWin;
-        killsToWin.text = $"Kills to win: {killWinCount}";
+        // killWinCount = MultiplayerGameManager.instance.killCountWin;
+        // killsToWin.text = $"Kills to win: {killWinCount}";
         
     }
     public void QuitGame() {
@@ -24,6 +24,9 @@ public class MarioInit : MonoBehaviour
     }
 
     void Update() {
+        killWinCount = MultiplayerGameManager.instance.killCountWin;
+        killsToWin.text = $"Kills to win: {killWinCount}";
+
         if (GetComponent<KillCount>().kills >= killWinCount) {
             GameObject[] allMarios = GameObject.FindGameObjectsWithTag("Player");
             foreach(GameObject mario in allMarios) {

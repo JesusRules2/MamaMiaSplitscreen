@@ -3113,7 +3113,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4263918943264411712}
   m_LocalRotation: {x: -0, y: 0.0319469, z: -0, w: -0.99948967}
-  m_LocalPosition: {x: 41.55799, y: 1.7324417, z: 46.19001}
+  m_LocalPosition: {x: -60.512012, y: 3.768442, z: -8.32999}
   m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3193,7 +3193,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   winScreen: {fileID: 2129565808601053988}
   loseScreen: {fileID: 9049434518612581553}
-  killsToWin: {fileID: 0}
+  killsToWin: {fileID: 6764786851714681255}
 --- !u!114 &3304707519293762256
 MonoBehaviour:
   m_ObjectHideFlags: 0
