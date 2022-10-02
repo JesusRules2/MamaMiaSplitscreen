@@ -11,6 +11,7 @@ TagManager:
   - Mario
   - Star
   - TextJoinGame
+  - CameraRed
   layers:
   - Default
   - TransparentFX

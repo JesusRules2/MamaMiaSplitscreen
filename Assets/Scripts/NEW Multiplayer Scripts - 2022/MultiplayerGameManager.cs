@@ -13,12 +13,20 @@ public class MultiplayerGameManager : MonoBehaviour
     [SerializeField] TMP_InputField killsInputField;
     [SerializeField] Button playButton;
     [HideInInspector] public int killCountWin;
-    [SerializeField] GameObject joinPlayerTextCanvas;
-    public bool bShowSetupScreen = true;
+    [SerializeField] GameObject killErrorText;
+
+    public static MultiplayerGameManager instance;    
+
+    void Awake() {
+        if (instance != this) {
+            instance = this;
+        }
+    }
 
     void Start()
     {
         killsInputField.text = "15";
+        killCountWin = int.Parse(killsInputField.text);
         killsInputField.onValueChanged.AddListener(KillCountChanged);
         playButton.onClick.AddListener(PlayButton);
         GameObject.FindObjectOfType<PlayerInputManager>().DisableJoining();
@@ -32,13 +40,25 @@ public class MultiplayerGameManager : MonoBehaviour
     }
 
     void PlayButton() {
+        if (killCountWin <= 0) {
+            killErrorText.SetActive(true);
+            StartCoroutine(DisplayErrorTextDelay());
+            return;
+        }
         GameObject.FindGameObjectWithTag("TextJoinGame").GetComponent<TMP_Text>().enabled = true;
         canvasSetup.SetActive(false);
         GameObject.FindObjectOfType<PlayerInputManager>().EnableJoining();
         // joinPlayerTextCanvas.SetActive(true);
     }
 
+    IEnumerator DisplayErrorTextDelay() {
+        yield return new WaitForSeconds(5.0f);
+        killErrorText.SetActive(false);
+    }
+
     public void QuitGame() {
+        killErrorText.SetActive(false);
+        // GameObject.FindGameObjectWithTag("CameraRed").GetComponent<Camera>().enabled = false;
          canvasSetup.SetActive(true);
         GameObject[] marios = GameObject.FindGameObjectsWithTag("Player");
         foreach (GameObject mario in marios) {
